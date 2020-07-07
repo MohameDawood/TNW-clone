@@ -1,0 +1,50 @@
+.nav {
+  @include clear-fix;
+  height: 4.8rem;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+
+  &__logo-box {
+    display: inline-block;
+    width: 10.6rem;
+    height: inherit;
+    background-image: linear-gradient(to bottom right, #c09, #f42 85%);
+  }
+
+  &__logo-link {
+    height: inherit;
+    padding: 16px 20px;
+    display: block;
+  }
+
+  &__logo {
+    height: 100%;
+  }
+
+  &__list-box {
+    float: right;
+    height: inherit;
+  }
+
+  &__list {
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    //[1:result] So that is why we have to valuate both W and H
+    height: inherit;
+    width: 4.8rem;
+    border-left: 1px solid #eee;
+  }
+
+  &__link {
+    padding: 1.6rem;
+    &--search {
+      //[1:Reason] Note that the parent lost it H * W like float when use absolute positioning
+      @include vh-align;
+      color: #999;
+    }
+  }
+}
